@@ -93,8 +93,6 @@ setInterval(function () {
 }, 10)
 
 
-
-
 $(document).keypress(function () {
     if (!start) {
         start = true;
