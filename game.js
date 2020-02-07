@@ -93,7 +93,7 @@ setInterval(function () {
 }, 10)
 
 
-$(document).keypress(function () {
+$(document).keypress(function (event) {
     if (!start) {
         start = true;
         for (var i = 1; i <= obstacleCount; i++) {
@@ -103,6 +103,15 @@ $(document).keypress(function () {
         startCounter();
         slide(num);
     }
+
+console.log(event.keyCode);
+
+if(event.keyCode == 38){
+    moveup();
+}
+if(event.keyCode == 40){
+    movedown();
+}
     
 });
 
@@ -133,4 +142,28 @@ function levelUp() {
         speed -= 1000;
         posDivi++;
 
+}
+
+function moveup(){
+    var rider = $("#rider").position().top;
+
+    rider -= 25;
+
+    var newTop = rider.toString()+"px"
+    $("#rider").animate({
+    	top: newTop
+    });
+    console.log(rider);
+}
+
+function movedown(){
+    var rider = $("#rider").position().top;
+
+    rider += 25;
+
+    var newTop = rider.toString()+"px"
+    $("#rider").animate({
+    	top: newTop
+    });
+    console.log(rider);
 }
