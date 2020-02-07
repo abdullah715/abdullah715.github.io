@@ -93,7 +93,7 @@ setInterval(function () {
 }, 10)
 
 
-$(document).keypress(function (event) {
+$(document).keypress(function () {
     if (!start) {
         start = true;
         for (var i = 1; i <= obstacleCount; i++) {
@@ -104,15 +104,19 @@ $(document).keypress(function (event) {
         slide(num);
     }
 
-console.log(event.keyCode);
 
-if(event.keyCode == 38){
-    moveup();
-}
-if(event.keyCode == 40){
-    movedown();
-}
     
+});
+
+$(document).keydown(function (event) {
+    console.log(event.keyCode);
+
+    if(event.keyCode == 38){
+        moveup();
+    }
+    if(event.keyCode == 40){
+        movedown();
+    }
 });
 
 
