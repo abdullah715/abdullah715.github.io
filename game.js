@@ -159,7 +159,6 @@ function moveup(){
     });
     console.log(rider);
 }
-
 function movedown(){
     var rider = $("#rider").position().top;
 
