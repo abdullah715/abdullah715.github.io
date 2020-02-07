@@ -156,9 +156,10 @@ function moveup(){
     var newTop = rider.toString()+"px"
     $("#rider").animate({
     	top: newTop
-    });
+    },100);
     console.log(rider);
 }
+
 function movedown(){
     var rider = $("#rider").position().top;
 
@@ -167,6 +168,6 @@ function movedown(){
     var newTop = rider.toString()+"px"
     $("#rider").animate({
     	top: newTop
-    });
+    },100);
     console.log(rider);
 }
