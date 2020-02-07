@@ -80,7 +80,6 @@ setInterval(function () {
                 slide(1);
             }
 
-
         }
     }
 
