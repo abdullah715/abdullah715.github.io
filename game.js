@@ -84,11 +84,12 @@ setInterval(function () {
         }
     }
 
-    if ((lvl - prevLvl == 1) && num == 1) {
+    if ((lvl - prevLvl == 1) && num == obstacleCount) {
         prevLvl++;
         levelUp();
     }
-
+    
+    $("#Level").text("Level " + lvl + " | Completed " + prevLvl + " | Speed Gap : " + speed);
 }, 10)
 
 
@@ -119,7 +120,7 @@ function startCounter() {
 
             prevLvl = lvl;
             lvl++;
-            $("#Level").text("Level " + lvl + "Completed " + prevLvl);
+            
 
 
         }
