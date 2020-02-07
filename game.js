@@ -160,6 +160,7 @@ function moveup(){
     console.log(rider);
 }
 
+//move down
 function movedown(){
     var rider = $("#rider").position().top;
 
