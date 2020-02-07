@@ -36,7 +36,7 @@ function slide(num) {
     $("#obstacle_" + num).css("top", topPostions[randNum])
 
     $("#obstacle_" + num).animate({
-        left: "-10%"
+        left: "-100"
     }, speed,
            function () {
 
